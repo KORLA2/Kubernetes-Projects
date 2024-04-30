@@ -11,3 +11,8 @@ When cluster is ready it generates system:masters group which has all admin perm
 
 There is a clusterrole called admin by attaching this role to user can have admin permissions.
 
+
+## Enable OIDC
+
+To enable and use IAM role with kubernetes service account OIDC has to be enabled.
+
