@@ -84,7 +84,8 @@ aws iam attach-role-policy --role-name worker-node-role --policy-arn arn:aws:iam
 --disk-size 200 \
 --scaling-config minSize=1,maxSize=2,desiredSize=1 \
 --instance-types t2.small
-```
+
+    ```
 
 
   
