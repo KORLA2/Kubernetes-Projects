@@ -28,7 +28,7 @@ Scales , backsup the master nodes , installs the necessary processes like API se
       }
     ]
 }
-   ```
+```
 
   ```aws  iam attach-role-policy --role-name master-node-role --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
   ```
@@ -77,7 +77,7 @@ aws iam attach-role-policy --role-name worker-node-role --policy-arn arn:aws:iam
 
 4. Create worker nodes
 
-     ```
+ ```
      
      aws eks create-nodegroup \
 --cluster-name my-eks-cluster \
@@ -88,7 +88,7 @@ aws iam attach-role-policy --role-name worker-node-role --policy-arn arn:aws:iam
 --scaling-config minSize=1,maxSize=2,desiredSize=1 \
 --instance-types t2.small
 
-    ```
+ ```
 
 
   
