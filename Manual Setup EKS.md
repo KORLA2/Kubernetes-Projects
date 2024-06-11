@@ -14,7 +14,7 @@ Scales , backsup the master nodes , installs the necessary processes like API se
 
    <b>assume-policy.json</b>
    
-   ```
+```
  {
     "Version": "2012-10-17",
     "Statement": [
@@ -28,6 +28,7 @@ Scales , backsup the master nodes , installs the necessary processes like API se
       }
     ]
 }
+
 ```
 
   ```aws  iam attach-role-policy --role-name master-node-role --policy-arn arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
