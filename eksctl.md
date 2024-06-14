@@ -29,3 +29,23 @@ eksctl create nodegroup --cluster=eksdemo1 \
 ```
 
                        
+```
+ Create SSH key for Node access (if you need it)
+yum install openssh
+mkdir -p ~/.ssh/
+PASSPHRASE="mysuperstrongpassword"
+ssh-keygen -t rsa -b 4096 -N "${PASSPHRASE}" -C "your_email@example.com" -q -f  ~/.ssh/id_rsa
+chmod 400 ~/.ssh/id_rsa*
+
+
+eksctl create cluster --name getting-started-eks \
+--region ap-southeast-2 \
+--version 1.16 \
+--managed \
+--node-type t2.small \
+--nodes 1 \
+--node-volume-size 200 \
+--ssh-access \
+--ssh-public-key=~/.ssh/id_rsa.pub \
+
+```
