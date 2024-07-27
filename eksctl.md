@@ -49,3 +49,9 @@ eksctl create cluster --name getting-started-eks \
 --ssh-public-key=~/.ssh/id_rsa.pub \
 
 ```
+## Create a Private Node group
+
+```
+eksctl create nodegroup --cluster <cluster name> --name <nodegroup name> --node-type=t2.micro --node-private-networking --region ap-south-1
+
+```
